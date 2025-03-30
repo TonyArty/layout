@@ -1,7 +1,10 @@
-const preloder = document.querySelector('.preloder')
+const preloderJs = () => {
+	const preloder = document.querySelector('.preloder')
 
-preloder.classList.add('active')
-
-setTimeout(() => {
-	preloder.classList.remove('active')
-}, 500)
+	preloder.classList.add('active')
+	
+	setTimeout(() => {
+		preloder.classList.remove('active')
+	}, 500)
+}
+preloderJs()
