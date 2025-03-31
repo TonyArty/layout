@@ -1,5 +1,17 @@
 const mainData = () => {
 
+	const renderGanreList = (ganres) => {
+		const dropDownBlock = document.querySelector('.header__menu .dropdown')
+
+		dropDownBlock.innerHTML = ''
+
+		ganres.forEach(ganre => {
+			dropDownBlock.insertAdjacentHTML('afterbegin', `
+				<li><a href="./categories.html?ganre=${ganre}">${ganre}</a></li>
+			`)
+		})
+	}
+
 	const renderAnimeList = (array, ganres) => {
 		const wrapper = document.querySelector('.product .col-lg-8')
 		wrapper.innerHTML = ''
@@ -33,8 +45,6 @@ const mainData = () => {
 						<li>${tag}</li>
 					`)
 				})
-				console.dir(tagsBlock)
-
 
 				listBlock.insertAdjacentHTML('afterbegin', `
 					<div class="col-lg-4 col-md-6 col-sm-6">
@@ -96,6 +106,7 @@ const mainData = () => {
 		})
 		
 		renderAnimeList(data, ganres)
+		renderGanreList(ganres)
 	})
 }
 mainData()
