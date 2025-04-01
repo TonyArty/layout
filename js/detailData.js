@@ -1,5 +1,7 @@
 const detailData = () => {
 
+	const preloder = document.querySelector('.preloder')
+
 	const renderGanreList = (ganres) => {
 		const dropDownBlock = document.querySelector('.header__menu .dropdown')
 
@@ -50,6 +52,10 @@ const detailData = () => {
 			document.querySelectorAll('.set-bg').forEach((elem) => {
 				elem.style.backgroundImage = `url(${elem.dataset.setbg})`
 			})
+
+			setTimeout(() => {
+				preloder.classList.remove('active')
+			}, 500)
 		} else {
 			console.log('Аниме отсутствует!')
 		}
