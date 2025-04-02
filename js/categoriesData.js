@@ -104,6 +104,8 @@ const categoriesData = () => {
 		const ganres = new Set()
 		const ganreParams = new URLSearchParams(window.location.search).get('ganre')
 		console.log(ganreParams);
+
+		document.title = `${ganreParams} | Категория Anime`
 		
 		data.forEach((item) => {
 			ganres.add(item.ganre)

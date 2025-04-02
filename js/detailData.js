@@ -34,6 +34,7 @@ const detailData = () => {
 			`)
 			titleBlock.textContent = animeObj.title
 			origTitleBlock.textContent = animeObj['original-title']
+			document.title = `${animeObj.title} | Anime`
 			descrBlock.textContent = animeObj.description
 			widgetList[0].innerHTML = ''
 			widgetList[0].insertAdjacentHTML('beforeend', `

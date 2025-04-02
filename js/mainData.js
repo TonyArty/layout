@@ -1,5 +1,7 @@
 const mainData = () => {
 
+	document.title = "Главная | Anime";
+
 	const preloder = document.querySelector('.preloder')
 
 	const renderGanreList = (ganres) => {
