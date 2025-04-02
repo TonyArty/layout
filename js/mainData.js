@@ -90,7 +90,7 @@ const mainData = () => {
 							<i class="fa fa-eye"></i> ${item.views}
 						</div>
 						<h5>
-							<a href="/anime-details.html">${item.title}</a>
+							<a href="/anime-details.html?itemId=${item.id}">${item.title}</a>
 						</h5>
 				</div>
 			`)
